@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Сайт тем Организации Объедененных Виртуальных Государств.">
+        <meta name="Keywords" content="карта, виртуальные, страны, государтва, ООВГ, организация, ВГ, маня">
+        <meta name="author" content=" Матвей Булдаков">
+        <meta charset="UTF-8">
+
+        <link rel="shortcut icon" href="./static/favicon.png" type="image/png">
+                
+        <link rel="stylesheet" href="./static/pre.css">
+        <link rel="stylesheet" href="./light.css">
+
+        <style id="css"></style>
+
+        <title>Тема</title>
+    </head>
+    <body>        
+        <div id="wrapper">
+            <div id="menu">
+                <a href="/" id="menu-logo"><img src="./static/logo.png" alt="OOVC"></a>
+                <div id="menu-items">
+                    <a href="#" class="menu-item">Главная</a>
+                    <a href="#" class="menu-item">Карта</a>
+                    <a href="#" class="menu-item">Страны</a>
+                    <a href="#" class="menu-item">Валюты</a>
+                    <a href="#" class="menu-item" id="last"><img src="./static/profile.png" alt="photo"><span>Профиль</span></a>
+                </div>
+            </div>
+
+            <div id="error">
+                <div id="error-code">
+                    <div class="error-code-element" style="font-size: 0px;">4</div>
+                    <div class="error-code-element" style="font-size: 0px;">0</div>
+                    <div class="error-code-element" style="font-size: 0px;">4</div>
+                </div>
+                <div id="error-under" style="transform: scale(0);">    
+                    <div id="error-description">Не Найдено</div>
+                    <a href="#" id="error-return">Вернуться</a>
+                </div>
+            </div>
+
+            <script>
+                async function error_anim() {
+                    await new Promise(r => setTimeout(r, 1000));
+                    document.querySelectorAll(".error-code-element").forEach(function(e) {
+                        e.style.fontSize = "";
+                    });
+                    await new Promise(r => setTimeout(r, 750));
+                    document.querySelector("#error-under").style.transform = "";
+                };
+                error_anim();
+            </script>
+        </div>
+
+        <textarea id="code">
+body {
+    --cl-q: #ffffff;                /*###################*/
+    --cl-w: #edeef0;                /*                   */
+    --cl-e: #b2b3b4;                /*                   */
+    --cl-r: #959596;                /*                   */
+    --cl-t: #868687;                /*  Standart Colors  */
+    --cl-y: #777778;                /*                   */
+    --cl-u: #696969;                /*                   */
+    --cl-i: #5a5a5a;                /*                   */
+    --cl-o: #3c3c3c;                /*                   */
+    --cl-p: #000000;                /*###################*/
+
+    --cl-error: #6495ed;            /*###################*/
+    --cl-error-hv: #457ade;         /*    Error Colors   */
+    --cl-error-return: #add8e6;     /*###################*/
+}
+
+/* Color Scheme: https://coolors.co/ffffff-edeef0-b2b3b4-959596-868687-777778-696969-5a5a5a-3c3c3c-000000 */            
+        </textarea>
+
+
+        <script src="./static/pre.js"></script>
+    </body>
+</html>

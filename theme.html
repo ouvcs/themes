@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Сайт тем Организации Объедененных Виртуальных Государств.">
+        <meta name="Keywords" content="карта, виртуальные, страны, государтва, ООВГ, организация, ВГ, маня">
+        <meta name="author" content=" Матвей Булдаков">
+        <meta charset="UTF-8">
+
+        <link rel="shortcut icon" href="./static/favicon.png" type="image/png">
+                
+        <link rel="stylesheet" href="./static/index.css">
+        <link rel="stylesheet" href="./light.css">
+        <link rel="stylesheet" href="./light.css" id="css">
+
+        <title>Тема</title>
+    </head>
+    <body>
+        <div id="menu">
+            <a href="/" id="menu-logo"><img src="./static/logo.png" alt="OOVC"></a>
+            <div id="menu-items">
+                <a href="#" class="menu-item">Главная</a>
+                <a href="#" class="menu-item">Карта</a>
+                <a href="#" class="menu-item">Страны</a>
+                <a href="#" class="menu-item">Валюты</a>
+                <a href="#" class="menu-item" id="last"><img src="./static/profile.png" alt="photo"><span>Профиль</span></a>
+            </div>
+        </div>
+        
+        <div id="wrapper">
+            <div id="error">
+                <div id="error-code">
+                    <div class="error-code-element" style="font-size: 0px;">4</div>
+                    <div class="error-code-element" style="font-size: 0px;">0</div>
+                    <div class="error-code-element" style="font-size: 0px;">4</div>
+                </div>
+                <div id="error-under" style="transform: scale(0);">    
+                    <div id="error-description">Не Найдено</div>
+                    <a href="#" id="error-return">Вернуться</a>
+                </div>
+            </div>
+
+            <script>
+                async function error_anim() {
+                    await new Promise(r => setTimeout(r, 1000));
+                    document.querySelectorAll(".error-code-element").forEach(function(e) {
+                        e.style.fontSize = "";
+                    });
+                    await new Promise(r => setTimeout(r, 750));
+                    document.querySelector("#error-under").style.transform = "";
+                };
+                error_anim();
+            </script>
+        </div>
+
+        <input type="text" id="current" placeholder="Тема">
+
+        <a href="/pre.html" id="to_pre">Для Желающих Добавить</a>
+
+        <script src="./static/index.js"></script>
+    </body>
+</html>
